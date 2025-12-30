@@ -1,0 +1,194 @@
+/* ==================== ABOUT SECTION ==================== */
+
+.about-section {
+  padding: 60px 40px;
+  background-color: var(--white-color);
+}
+
+/* ==================== ABOUT HEADER ==================== */
+
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-header .section-title {
+  color: var(--dark-color);
+  margin-bottom: 18px;
+}
+
+.about-header .section-subtitle {
+  color: var(--gray-color);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 20px;
+}
+
+/* ==================== ABOUT CONTENT ==================== */
+
+.about-content {
+  display: flex;
+  gap: 136px;
+  align-items: start;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ==================== ABOUT PHONE ==================== */
+
+.about-phone {
+  position: relative;
+  width: 400px;
+  height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-image {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+/* ==================== ABOUT FEATURES ==================== */
+
+.about-features-about {
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+  width: 568px;
+}
+
+.feature-card {
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 21px 18px;
+  display: flex;
+  gap: 17px;
+  align-items: flex-start;
+  transition: all var(--transition-speed) ease;
+  border: 1px solid transparent;
+}
+
+.feature-card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.feature-content {
+  flex-grow: 1;
+}
+
+.feature-title-about {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--black-color);
+  margin: 0 0 8px 0;
+  line-height: 30px;
+}
+
+.feature-description {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-color);
+  line-height: 24px;
+  margin: 0;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+
+@media (max-width: 1050px) {
+  .about-content {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 60px;
+    align-items: start;
+
+  }
+
+
+  .about-features-about {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 870px) {
+  .about-section {
+    display: grid;
+
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .about-header {
+    margin-bottom: 40px;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+
+  .about-features-about {
+    gap: 30px;
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  .feature-card {
+    flex-direction: column;
+    gap: 12px;
+
+  }
+
+  .feature-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .feature-title {
+    font-size: 18px;
+  }
+
+  .feature-description {
+    font-size: 14px;
+  }
+  .about-phone {
+    width: 300px;
+    height: auto;
+  }
+  .phone-image {
+    width: 300px;
+    height: auto;
+}
+
+}

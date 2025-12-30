@@ -1,0 +1,263 @@
+/* ==================== FOOTER ==================== */
+
+.footer {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ==================== FOOTER LINKS ==================== */
+
+.footer-links {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 36px;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-card {
+  background-color: var(--white-color);
+  border-radius: 10px;
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  transition: all var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column;
+  height: 388px;
+}
+
+.footer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+}
+
+.footer-card-image {
+  width: 100%;
+  height: 228px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.footer-card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px;
+  flex: 1;
+}
+
+.footer-card-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--dark-color);
+  margin: 0;
+  line-height: 30px;
+}
+
+.footer-card-link {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: all var(--transition-speed) ease;
+}
+
+.footer-card-link:hover {
+  color: var(--secondary-color);
+}
+
+/* ==================== FOOTER BOTTOM ==================== */
+
+.footer-bottom {
+  background-color: var(--dark-color);
+  padding: 30px 135px 18px;
+}
+
+/* ==================== FOOTER NAV ==================== */
+
+.footer-nav {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 55.396px;
+  font-weight: 500;
+  color: var(--white-color);
+  text-align: center;
+  line-height: 76.729px;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+  min-width: 129px;
+}
+
+.footer-nav-item {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white-color);
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+  white-space: nowrap;
+  line-height: 24px;
+}
+
+.footer-nav-item:hover {
+  color: var(--primary-color);
+}
+
+/* ==================== FOOTER DIVIDER ==================== */
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray-color);
+  margin: 10px 0;
+}
+
+/* ==================== FOOTER COPYRIGHT ==================== */
+
+.footer-copyright {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.copyright-icon {
+  font-size: 24px;
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.copyright-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white-color);
+  margin: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .footer-bottom {
+    padding: 30px 60px 18px;
+  }
+
+  .footer-nav {
+    gap: 30px;
+  }
+
+  .footer-logo {
+    font-size: 40px;
+  }
+
+  .footer-nav-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .footer-card {
+    height: 350px;
+  }
+
+  .footer-card-image {
+    height: 200px;
+  }
+
+  .footer-bottom {
+    padding: 20px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-size: 32px;
+    min-width: 100px;
+  }
+
+  .footer-nav-item {
+    font-size: 13px;
+  }
+
+  .footer-copyright {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .copyright-text {
+    font-size: 12px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .footer-card {
+    height: 300px;
+  }
+
+  .footer-card-image {
+    height: 150px;
+  }
+
+  .footer-card-title {
+    font-size: 16px;
+  }
+
+  .footer-card-link {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    padding: 15px;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+  }
+
+  .footer-nav {
+    gap: 10px;
+  }
+
+  .footer-nav-item {
+    font-size: 12px;
+  }
+
+  .copyright-text {
+    font-size: 11px;
+  }
+}

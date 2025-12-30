@@ -1,0 +1,225 @@
+/* ==================== APP SCREEN SECTION ==================== */
+
+.app-screen-section {
+  padding: 40px 20px;
+  background-color: var(--white-color);
+}
+
+.app-screen-section .section-title {
+  color: var(--dark-color);
+  margin-bottom: 40px;
+}
+
+/* ==================== CAROUSEL ==================== */
+
+.carousel-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 800px;
+  max-width: 1200px;
+}
+
+.carousel-slides {
+  position: relative;
+  width: 825px;
+  height: 622px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.carousel-slide {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease;
+  border: 2px solid var(--black-color);
+  border-radius: 26px;
+  overflow: hidden;
+  width: 319px;
+  height: 622px;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-slide:not(.active) {
+  width: 225px;
+  height: 488px;
+  opacity: 0.2;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide:not(.active) img {
+  opacity: 0.2;
+}
+
+/* ==================== CAROUSEL BUTTONS ==================== */
+
+.carousel-btn {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 107, 255, 0.1) 0%, rgba(45, 131, 250, 0.1) 100%);
+  border: 2px solid var(--primary-color);
+  color: var(--dark-color);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-btn:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white-color);
+  box-shadow: 0 4px 15px rgba(0, 107, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.carousel-btn-left,
+.carousel-btn-right {
+  flex-shrink: 0;
+}
+
+/* ==================== CAROUSEL DOTS ==================== */
+
+.carousel-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--gray-color);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.carousel-dot.active {
+  background-color: var(--primary-color);
+  width: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 107, 255, 0.3);
+}
+
+.carousel-dot:hover {
+  background-color: var(--primary-color);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1200px) {
+  .carousel-wrapper {
+    width: 100%;
+    gap: 10px;
+
+  }
+
+  .carousel-slides {
+    width: 250px;
+    height: 500px;
+    margin: 0 0px;
+  }
+  .carousel-slide {
+    width: 250px;
+    height: 500px;
+    
+  }
+
+  .carousel-slide:not(.active) {
+    width: 200px;
+    height: 400px;
+    
+  }
+
+  .carousel-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .carousel-wrapper {
+    min-width: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Mobile: target sizes requested by designer */
+  .carousel-slides {
+    width: 200px;
+    height: 420px;
+    margin: 0 auto;
+  }
+  .carousel-slide {
+    width: 200px;
+    height: 420px;
+  }
+
+  /* On mobile only show the central slide */
+  .carousel-slide:not(.active) {
+    display: none;
+  }
+
+  .carousel-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 9px;
+  }
+
+  .app-screen-section .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slides {
+    width: 220px;
+    height: 400px;
+  }
+
+  .carousel-btn {
+    width: 50px;
+    height: 50px;
+  }
+}

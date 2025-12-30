@@ -1,0 +1,392 @@
+/* ==================== FEATURE SECTION ==================== */
+
+.feature-section {
+  position: relative;
+  padding: 80px 129px 0px;
+  background: linear-gradient(135deg, rgba(0, 107, 255, 0.08) 0%, rgba(45, 131, 250, 0.08) 100%);
+  color: var(--white-color);
+  min-height: 1445px;
+}
+
+.feature-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/featureSection/featureSection.png') no-repeat center/cover;
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ==================== FEATURE HEADER ==================== */
+
+.feature-header {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 67px;
+}
+
+.feature-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-bottom: 18px;
+  line-height: 47.25px;
+}
+
+.feature-subtitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white-color);
+  line-height: 24px;
+  max-width: 601px;
+  margin: 0 auto;
+  height: 70px;
+}
+
+/* ==================== FEATURE CENTER ==================== */
+
+.feature-center {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 67px;
+  margin-bottom: 150px;
+}
+
+.feature-item-center {
+  display: flex;
+  width: 339px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.feature-main {
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
+  align-items: center;
+  width: 339px;
+}
+
+.feature-main-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white-color);
+  text-align: center;
+  margin: 0;
+  line-height: 37.5px;
+}
+
+.feature-main-description {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white-color);
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  width: 297px;
+  height: 43px;
+}
+
+/* ==================== FEATURE GRID ==================== */
+
+.feature-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 354px 394px 354px;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-left {
+  display: flex;
+  flex-direction: column;
+  gap: 347px;
+  align-items: flex-end;
+  height: 690px;
+  justify-content: center;
+}
+
+.feature-phone-mockup {
+  position: relative;
+  width: 394px;
+  height: 804px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 40px 40px 100px 0 rgba(24, 48, 63, 0.50);
+}
+
+.feature-phone-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-right {
+  display: flex;
+  flex-direction: column;
+  gap: 342px;
+  align-items: flex-start;
+  height: 690px;
+  justify-content: center;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+  width: 339px;
+}
+
+.feature-item-right {
+  align-items: flex-start;
+}
+
+.feature-item-icon {
+  font-size: 50px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-item-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin: 0;
+  line-height: 37.5px;
+  text-align: right;
+}
+
+.feature-item-right .feature-item-title {
+  text-align: left;
+}
+
+.feature-item-description {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white-color);
+  line-height: 24px;
+  text-align: right;
+  margin: 0;
+  height: 43px;
+}
+
+.feature-item-right .feature-item-description {
+  text-align: left;
+  width: 100%;
+}
+
+/* === Center item overrides === */
+/* Ensure the center feature item stays fully centered (overrides .feature-item rules) */
+.feature-center .feature-item-center,
+.feature-item-center.feature-item {
+  align-items: center;
+  text-align: center;
+}
+
+.feature-item-center .feature-item-title,
+.feature-item-center .feature-item-description {
+  text-align: center;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1250px) {
+  .feature-section {
+    padding: 80px 60px;
+    min-height: 100%;
+  }
+
+  /* Two-column layout: left column stacks feature-left + feature-right, right column contains feature-center */
+  .feature-grid {
+    grid-template-columns: 1fr 394px;
+    gap: 40px;
+    align-items: center;
+  }
+
+  /* Place the columns using grid so DOM order remains */
+  .feature-left {
+    grid-column: 1;
+    grid-row: 1;
+    align-items: center;
+    gap: 60px;
+    height: auto;
+  }
+
+  .feature-center {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin-bottom: 0px;
+    align-items: center;
+  }
+
+  .feature-right {
+    grid-column: 1;
+    grid-row: 2;
+    align-items: center;
+    gap: 60px;
+    height: auto;
+  }
+
+  /* Left & right items: left-aligned text and compact font sizes */
+  .feature-left .feature-item,
+  .feature-right .feature-item {
+    align-items: center;
+    text-align: center;
+    width: 339px;
+  }
+
+  .feature-item-title {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .feature-item-description {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Center item keeps its centered alignment */
+  .feature-center .feature-item-center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-phone-mockup {
+    width: 300px;
+    height: 600px;
+  }
+
+  .feature-item-right .feature-item-title {
+  text-align: center;
+  }
+
+  .feature-item-right .feature-item-description {
+  text-align: center;
+  width: 100%;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .feature-section {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .feature-header {
+    margin-bottom: 40px;
+  }
+
+  .feature-title {
+    font-size: 24px;
+  }
+
+  .feature-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    height: auto;
+  }
+
+  .feature-main-title {
+    font-size: 18px;
+  }
+
+  .feature-main-description {
+    font-size: 14px;
+    width: 100%;
+    height: auto;
+  }
+
+  .feature-item-title {
+    font-size: 18px;
+  }
+
+  .feature-item-description {
+    font-size: 14px;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 40px;
+    width: auto;
+  }
+
+  .feature-left {
+    grid-column: 1;
+    grid-row: 1;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .feature-center {
+    grid-column: 1;
+    grid-row: 2;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 40px;
+  }
+
+  .feature-right {
+    grid-column: 1;
+    grid-row: 3;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* Tighten typography to 14px as requested */
+  .feature-item-title {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .feature-item-description {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  /* Ensure center item remains centered */
+  .feature-center .feature-item-center {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .feature-phone-mockup {
+    border-radius: 24px;
+    width: 214px;
+    height: 468px;
+
+  }
+}
