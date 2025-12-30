@@ -11,8 +11,8 @@ export default function TeamSection() {
       subrole: 'UI/UX Designer',
       image: '../../assets/teamSection/karolina.png',
       social: {
-        instagram: 'https://instagram.com',
-        linkedin: 'https://linkedin.com'
+        instagram: 'https://www.instagram.com/karolinaoteroa?igsh=MXRsbTF1bzNsbnF1Yw==',
+        linkedin: 'https://www.linkedin.com/in/karolina-mar%C3%ADa-otero-argel-1884b6241/'
       }
     },
     {
@@ -22,9 +22,9 @@ export default function TeamSection() {
       subrole: 'UI/UX Designer',
       image: '../../assets/teamSection/jereminth.png',
       social: {
-        instagram: 'https://instagram.com',
-        youtube: 'https://youtube.com',
-        linkedin: 'https://linkedin.com'
+        instagram: 'https://www.instagram.com/jemy.mt.7?igsh=MTc2Z3IxZXlqMDhkeg==',
+        youtube: 'https://www.youtube.com/@jereminthmunozdelatorre7376',
+        linkedin: 'https://www.linkedin.com/in/jereminth-mu%C3%B1oz-de-la-torre/'
       }
     }
   ]

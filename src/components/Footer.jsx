@@ -6,14 +6,19 @@ export default function Footer() {
     {
       id: 1,
       title: 'Prueba demo de KIBO aquí',
-      image: '/assets/footer/demo.png',
-      link: '#'
+      link: 'https://graph.kibo.aventiscali.com/'
     },
     {
       id: 2,
-      title: 'Visita la documentación de la API',
-      image: '/assets/footer/api.png',
-      link: '#'
+      title: 'Visita la documentación de la APP móvil',
+      image: './assets/footer/api.png',
+      link: 'https://github.com/SamyuMT/Kibo'
+    },
+    { 
+      id: 3,
+      title: 'Visita el documento de proyecto completo',
+      image: './assets/footer/documentos.png',
+      link: 'https://drive.google.com/drive/folders/125nJ0zDbnVs4Ib-yTelKQLt_1dH1T4Cz?usp=sharing'
     }
   ]
 
@@ -22,10 +27,23 @@ export default function Footer() {
       <div className="footer-links">
         {demoLinks.map((item) => (
           <div key={item.id} className="footer-card">
-            <img src={item.image} alt={item.title} className="footer-card-image" />
+            {item.image ? (
+              <img 
+                src={item.image} 
+                alt={item.title} 
+                className="footer-card-preview"
+              />
+            ) : (
+              <iframe 
+                src={item.link} 
+                title={item.title}
+                className="footer-card-preview"
+                loading="lazy"
+              />
+            )}
             <div className="footer-card-content">
               <p className="footer-card-title">{item.title}</p>
-              <a href={item.link} className="footer-card-link">
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="footer-card-link">
                 Navegar
               </a>
             </div>
