@@ -1,5 +1,6 @@
 import React from 'react'
 import './FeatureSection.css'
+import { useLanguage } from '../contexts/LanguageContext'
 
 import iconDashboard from '../../assets/featureSection/surface1.png'
 import iconDesign from '../../assets/featureSection/design.png'
@@ -9,46 +10,19 @@ import iconPrivacy from '../../assets/featureSection/eye-scanner 2.png'
 import kiboPhone from '../../assets/featureSection/movil1.png'
 
 export default function FeatureSection() {
-  const features = [
-    {
-      id: 1,
-      icon: iconDashboard,
-      title: 'Dashboard Web',
-      description: 'Una versión web para monitoreo a distancia.'
-    },
-    {
-      id: 2,
-      icon: iconDesign,
-      title: 'Diseño Amigable',
-      description: 'Usabilidad pensada para adultos mayores.'
-    },
-    {
-      id: 3,
-      icon: iconAlert,
-      title: 'Alertas en Tiempo Real',
-      description: 'Integración de alertas locales y vía WhatsApp.'
-    },
-    {
-      id: 4,
-      icon: iconMobile,
-      title: 'iOS y Android',
-      description: 'Compatible con todos los sistemas operativos móviles.'
-    },
-    {
-      id: 5,
-      icon: iconPrivacy,
-      title: 'Privacidad de los datos',
-      description: 'Todos los datos sensibles están protegidos según la ley 1581 de 2012.'
-    }
-  ]
+  const { t } = useLanguage()
+
+  const features = t.features.list.map((f, i) => {
+    // keep original icons order
+    const icons = [iconDashboard, iconDesign, iconAlert, iconMobile, iconPrivacy]
+    return { id: i + 1, icon: icons[i], ...f }
+  })
 
   return (
     <section id="features" className="feature-section">
       <div className="feature-header">
-        <h2 className="feature-title">Características</h2>
-        <p className="feature-subtitle">
-          KIBO posee todos los protocolos necesarios para garantizar ser una herramienta confiable en el cuidado del usuario.
-        </p>
+        <h2 className="feature-title">{t.features.title}</h2>
+        <p className="feature-subtitle">{t.features.subtitle}</p>
       </div>
 
       <div className="feature-grid">

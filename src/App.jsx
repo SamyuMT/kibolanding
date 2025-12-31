@@ -7,18 +7,21 @@ import AppScreenSection from './components/AppScreenSection'
 import VideoSection from './components/VideoSection'
 import TeamSection from './components/TeamSection'
 import Footer from './components/Footer'
+import { LanguageProvider } from './contexts/LanguageContext'
 
 function App() {
   return (
-    <div className="app">
-      <HeroSection />
-      <AboutSection />
-      <FeatureSection />
-      <AppScreenSection />
-      <VideoSection />
-      <TeamSection />
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="app">
+        <HeroSection />
+        <AboutSection />
+        <FeatureSection />
+        <AppScreenSection />
+        <VideoSection />
+        <TeamSection />
+        <Footer />
+      </div>
+    </LanguageProvider>
   )
 }
 

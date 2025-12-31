@@ -1,8 +1,10 @@
 import React from 'react'
 import './TeamSection.css'
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function TeamSection() {
+  const { t } = useLanguage()
   const team = [
     {
       id: 1,
@@ -32,10 +34,8 @@ export default function TeamSection() {
   return (
     <section id="team" className="team-section">
       <div className="team-header">
-        <h2 className="section-title">Equipo creador</h2>
-        <p className="section-subtitle">
-          Este proyecto fue creado por dos estudiantes de ingeniería biomédica, con el fin de lograr su título profesional e iniciativa para el desarrollo de herramientas de inteligencia artificial para el ámbito médico.
-        </p>
+        <h2 className="section-title">{t.team.title}</h2>
+        <p className="section-subtitle">{t.team.subtitle}</p>
       </div>
 
       <div className="team-grid">

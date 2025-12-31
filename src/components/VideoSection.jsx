@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import './VideoSection.css'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false)
+  const { t } = useLanguage()
 
   return (
     <section className="video-section">
-      <h2 className="video-title">Cómo se usa la aplicación</h2>
+      <h2 className="video-title">{t.video.title}</h2>
 
       <div className="video-container">
         <div className="video-wrapper">

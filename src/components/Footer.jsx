@@ -1,22 +1,25 @@
 import React from 'react'
 import './Footer.css'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   const demoLinks = [
     {
       id: 1,
-      title: 'Prueba demo de KIBO aquí',
+      title: t.footer.demoLinks[0],
       link: 'https://graph.kibo.aventiscali.com/'
     },
     {
       id: 2,
-      title: 'Visita la documentación de la APP móvil',
+      title: t.footer.demoLinks[1],
       image: './assets/footer/api.png',
       link: 'https://github.com/SamyuMT/Kibo'
     },
     { 
       id: 3,
-      title: 'Visita el documento de proyecto completo',
+      title: t.footer.demoLinks[2],
       image: './assets/footer/documentos.png',
       link: 'https://drive.google.com/drive/folders/125nJ0zDbnVs4Ib-yTelKQLt_1dH1T4Cz?usp=sharing'
     }
@@ -44,7 +47,7 @@ export default function Footer() {
             <div className="footer-card-content">
               <p className="footer-card-title">{item.title}</p>
               <a href={item.link} target="_blank" rel="noopener noreferrer" className="footer-card-link">
-                Navegar
+                {t.footer.browse}
               </a>
             </div>
           </div>
@@ -55,16 +58,16 @@ export default function Footer() {
         <nav className="footer-nav">
           <div className="footer-logo">KIBO</div>
           <a href="#inicio" className="footer-nav-item">
-            Inicio
+            {t.footer.nav.home}
           </a>
           <a href="#about" className="footer-nav-item">
-            Acerca de
+            {t.footer.nav.about}
           </a>
           <a href="#features" className="footer-nav-item">
-            Características
+            {t.footer.nav.features}
           </a>
           <a href="#screens" className="footer-nav-item">
-            Pantallas
+            {t.footer.nav.screens}
           </a>
         </nav>
 
@@ -72,7 +75,7 @@ export default function Footer() {
 
         <div className="footer-copyright">
           <span className="copyright-icon">©</span>
-          <p className="copyright-text">Copyright 2025. Aventis Cali</p>
+          <p className="copyright-text">{t.footer.copyright}</p>
         </div>
       </div>
     </footer>

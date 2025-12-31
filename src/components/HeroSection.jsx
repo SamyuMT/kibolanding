@@ -4,9 +4,11 @@ import pythonImg from '../../assets/heroSection/python.png'
 import flaskImg from '../../assets/heroSection/flask.png'
 import flutterImg from '../../assets/heroSection/flutter.png'
 import rectanguloHero from '../../assets/heroSection/rectangulo-hero.png'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { lang, setLang, toggleLanguage, t } = useLanguage()
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
@@ -23,10 +25,28 @@ export default function HeroSection() {
           <h1 className="logo-text">KIBO</h1>
         </div>
         <nav className="hero-nav-items">
-          <a href="#inicio" className="nav-item active">INICIO</a>
-          <a href="#about" className="nav-item">ACERCA DE</a>
-          <a href="#features" className="nav-item">CARACTERÍSTICAS</a>
-          <a href="#screens" className="nav-item">PANTALLAS</a>
+          <a href="#inicio" className="nav-item active">{t.nav.home}</a>
+          <a href="#about" className="nav-item">{t.nav.about}</a>
+          <a href="#features" className="nav-item">{t.nav.features}</a>
+          <a href="#screens" className="nav-item">{t.nav.screens}</a>
+          <div className="lang-toggle" role="tablist" aria-label="Language selector">
+            <button
+              type="button"
+              className={`lang-option ${lang === 'en' ? 'active' : ''}`}
+              onClick={() => setLang('en')}
+              aria-pressed={lang === 'en'}
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              className={`lang-option ${lang === 'es' ? 'active' : ''}`}
+              onClick={() => setLang('es')}
+              aria-pressed={lang === 'es'}
+            >
+              ES
+            </button>
+          </div>
         </nav>
         <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
           <span></span>
@@ -38,20 +58,36 @@ export default function HeroSection() {
       {menuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
       
       <nav className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-        <a href="#inicio" className="mobile-nav-item" onClick={closeMenu}>INICIO</a>
-        <a href="#about" className="mobile-nav-item" onClick={closeMenu}>ACERCA DE</a>
-        <a href="#features" className="mobile-nav-item" onClick={closeMenu}>CARACTERÍSTICAS</a>
-        <a href="#screens" className="mobile-nav-item" onClick={closeMenu}>PANTALLAS</a>
+        <a href="#inicio" className="mobile-nav-item" onClick={closeMenu}>{t.nav.home}</a>
+        <a href="#about" className="mobile-nav-item" onClick={closeMenu}>{t.nav.about}</a>
+        <a href="#features" className="mobile-nav-item" onClick={closeMenu}>{t.nav.features}</a>
+        <a href="#screens" className="mobile-nav-item" onClick={closeMenu}>{t.nav.screens}</a>
+        <div className="mobile-lang-toggle">
+          <button
+            type="button"
+            className={`mobile-lang-option ${lang === 'en' ? 'active' : ''}`}
+            onClick={() => { setLang('en'); closeMenu(); }}
+            aria-pressed={lang === 'en'}
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            className={`mobile-lang-option ${lang === 'es' ? 'active' : ''}`}
+            onClick={() => { setLang('es'); closeMenu(); }}
+            aria-pressed={lang === 'es'}
+          >
+            ES
+          </button>
+        </div>
       </nav>
 
       <div className="hero-content">
         <div className="hero-text">
           <img className="hero-rectangle" src={rectanguloHero} alt="" aria-hidden="true" />
           <div className="hero-text-box">
-            <h2 className="hero-title">KIBO una app para salvar vidas</h2>
-            <p className="hero-description">
-              KIBO nace como una herramienta monitorización cardíaca que puede reconocer y clasificar varios tipos de arritmias de manera eficiente y alertar de forma anticipada un posible cuadro de muerte subita cardiaca mediante el uso de inteligencia artificial como base tecnológica.
-            </p>
+            <h2 className="hero-title">{t.hero.title}</h2>
+            <p className="hero-description">{t.hero.description}</p>
             <div className="hero-stack">
               <div className="tech-badge">
                 <img src={pythonImg} alt="Python logo" style={{ height: '56px', width: 'auto' }} />

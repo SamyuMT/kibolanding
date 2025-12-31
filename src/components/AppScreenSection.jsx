@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './AppScreenSection.css'
+import { useLanguage } from '../contexts/LanguageContext'
 
 import imgAjustes from '../../assets/appScreenSection/Ajustes.png'
 import imgAjustesUser from '../../assets/appScreenSection/AjustesUser.png'
@@ -10,6 +11,7 @@ import imgReportes from '../../assets/appScreenSection/Reportes.png'
 import imgUser from '../../assets/appScreenSection/User.png'
 
 export default function AppScreenSection() {
+  const { t } = useLanguage()
   const items = [
     
     { src: imgAjustesUser, alt: 'Ajustes Usuario' },
@@ -37,7 +39,7 @@ export default function AppScreenSection() {
 
   return (
     <section id="screens" className="app-screen-section">
-      <h2 className="section-title">INTERFAZ GRÁFICA</h2>
+      <h2 className="section-title">{t.appscreen.title}</h2>
 
       <div className="carousel-container">
         <div className="carousel-wrapper">
