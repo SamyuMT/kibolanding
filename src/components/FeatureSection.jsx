@@ -6,7 +6,7 @@ import iconDesign from '../../assets/featureSection/design.png'
 import iconAlert from '../../assets/featureSection/chat.png'
 import iconMobile from '../../assets/featureSection/cell-phone.png'
 import iconPrivacy from '../../assets/featureSection/eye-scanner 2.png'
-import kiboPhone from '../../assets/featureSection/movil.png'
+import kiboPhone from '../../assets/featureSection/movil1.png'
 
 export default function FeatureSection() {
   const features = [
