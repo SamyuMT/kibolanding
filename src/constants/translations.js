@@ -61,7 +61,8 @@ const translations = {
       demoLinks: [
         'Try the KIBO demo here',
         'Visit the mobile app documentation',
-        'See the full project document'
+        'See the full project document',
+        'View the Figma mobile app design'
       ],
       browse: 'Browse',
       nav: {
@@ -134,7 +135,8 @@ const translations = {
       demoLinks: [
         'Prueba demo de KIBO aquí',
         'Visita la documentación de la APP móvil',
-        'Visita el documento de proyecto completo'
+        'Visita el documento de proyecto completo',
+        'Visita el Figma del diseño de la APP móvil'
       ],
       browse: 'Navegar',
       nav: {

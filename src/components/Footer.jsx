@@ -1,29 +1,24 @@
 import React from 'react'
 import './Footer.css'
 import { useLanguage } from '../contexts/LanguageContext'
+import apiImg from '../../assets/footer/api.png'
+import documentosImg from '../../assets/footer/documentos.png'
+import figmaImg from '../../assets/footer/figma.png'
 
 export default function Footer() {
   const { t } = useLanguage()
-
-  const demoLinks = [
-    {
-      id: 1,
-      title: t.footer.demoLinks[0],
-      link: 'https://graph.kibo.aventiscali.com/'
-    },
-    {
-      id: 2,
-      title: t.footer.demoLinks[1],
-      image: './assets/footer/api.png',
-      link: 'https://github.com/SamyuMT/Kibo'
-    },
-    { 
-      id: 3,
-      title: t.footer.demoLinks[2],
-      image: './assets/footer/documentos.png',
-      link: 'https://drive.google.com/drive/folders/125nJ0zDbnVs4Ib-yTelKQLt_1dH1T4Cz?usp=sharing'
-    }
+  const demoMeta = [
+    { link: 'https://graph.kibo.aventiscali.com/' },
+    { image: apiImg, link: 'https://github.com/SamyuMT/Kibo' },
+    { image: documentosImg, link: 'https://drive.google.com/drive/folders/125nJ0zDbnVs4Ib-yTelKQLt_1dH1T4Cz?usp=sharing' },
+    { image: figmaImg, link: 'https://www.figma.com/community/file/1587623705788629706/prototipoapp' }
   ]
+
+  const demoLinks = demoMeta.map((meta, i) => ({
+    id: i + 1,
+    title: t.footer.demoLinks[i] || meta.title || `Link ${i + 1}`,
+    ...meta
+  }))
 
   return (
     <footer className="footer">

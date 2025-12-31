@@ -1,7 +1,7 @@
 import React from 'react'
 import './AboutSection.css'
 import { useLanguage } from '../contexts/LanguageContext'
-
+import aboutPhone from '../../assets/aboutSection/imagenMovil.png'
 export default function AboutSection() {
   const { t } = useLanguage()
 
@@ -16,7 +16,7 @@ export default function AboutSection() {
 
       <div className="about-content">
         <div className="about-phone">
-          <img src="../../assets/aboutSection/imagenMovil.png" alt="KIBO Mobile" className="phone-image" />
+          <img src={aboutPhone} alt="KIBO Mobile" className="phone-image" />
         </div>
 
         <div className="about-features-about">

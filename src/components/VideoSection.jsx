@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './VideoSection.css'
 import { useLanguage } from '../contexts/LanguageContext'
-
+import videoThumbnail from '../../assets/video/videoThumbnail.png'
 export default function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false)
   const { t } = useLanguage()
@@ -13,7 +13,7 @@ export default function VideoSection() {
       <div className="video-container">
         <div className="video-wrapper">
           <img
-            src="../../assets/video/videoThumbnail.png"
+            src={videoThumbnail}
             alt="KIBO Demo Video"
             className="video-thumbnail"
           />

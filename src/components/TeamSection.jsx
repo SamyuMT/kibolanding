@@ -2,6 +2,8 @@ import React from 'react'
 import './TeamSection.css'
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { useLanguage } from '../contexts/LanguageContext'
+import karolinaImg from '../../assets/teamSection/karolina.png'
+import jereminthImg from '../../assets/teamSection/jereminth.png'
 
 export default function TeamSection() {
   const { t } = useLanguage()
@@ -11,7 +13,7 @@ export default function TeamSection() {
       name: 'Karolina Otero',
       role: 'Project Management',
       subrole: 'UI/UX Designer',
-      image: '../../assets/teamSection/karolina.png',
+      image: karolinaImg,
       social: {
         instagram: 'https://www.instagram.com/karolinaoteroa?igsh=MXRsbTF1bzNsbnF1Yw==',
         linkedin: 'https://www.linkedin.com/in/karolina-mar%C3%ADa-otero-argel-1884b6241/'
@@ -22,7 +24,7 @@ export default function TeamSection() {
       name: 'Jereminth Muñoz',
       role: 'Developer Full Stack',
       subrole: 'UI/UX Designer',
-      image: '../../assets/teamSection/jereminth.png',
+      image: jereminthImg,
       social: {
         instagram: 'https://www.instagram.com/jemy.mt.7?igsh=MTc2Z3IxZXlqMDhkeg==',
         youtube: 'https://www.youtube.com/@jereminthmunozdelatorre7376',

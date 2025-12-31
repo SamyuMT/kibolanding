@@ -5,6 +5,7 @@ import flaskImg from '../../assets/heroSection/flask.png'
 import flutterImg from '../../assets/heroSection/flutter.png'
 import rectanguloHero from '../../assets/heroSection/rectangulo-hero.png'
 import { useLanguage } from '../contexts/LanguageContext'
+import appPhone from '../../assets/heroSection/hero.png'
 
 export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -107,7 +108,7 @@ export default function HeroSection() {
 
         <div className="hero-phone">
           <div className="phone-mockup">
-            <img src="../../assets/heroSection/hero.png" alt="KIBO App Phone" />
+            <img src={appPhone} alt="KIBO App Phone" />
           </div>
         </div>
       </div>
