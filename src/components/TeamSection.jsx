@@ -10,7 +10,7 @@ export default function TeamSection() {
   const team = [
     {
       id: 1,
-      name: 'Karolina Otero',
+      name: 'Karolina Maria Otero',
       role: 'Project Management',
       subrole: 'UI/UX Designer',
       image: karolinaImg,
