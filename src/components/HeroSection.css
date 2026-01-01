@@ -36,6 +36,12 @@
   box-shadow: var(--shadow-light);
 }
 
+.navbar-right {
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+
 .hero-logo {
   display: flex;
   align-items: center;
@@ -440,6 +446,12 @@
     margin-bottom: 40px;
   }
 
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
   .logo-text {
     font-size: 32.605px;
   }
@@ -462,8 +474,10 @@
 
   .mobile-lang-toggle {
     display: inline-flex;
-    gap: 8px;
-    margin-top: 12px;
+    gap: 4px;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 4px;
+    border-radius: 999px;
   }
 
   .mobile-lang-option {
@@ -471,19 +485,19 @@
     -webkit-appearance: none;
     border: none;
     background: transparent;
-    padding: 8px 14px;
+    padding: 6px 10px;
     border-radius: 999px;
     font-weight: 700;
+    font-size: 12px;
     cursor: pointer;
-    color: var(--white-color);
-    opacity: 0.85;
+    color: var(--dark-color);
     transition: all 160ms ease;
   }
 
   .mobile-lang-option.active {
-    background: rgba(255,255,255,0.15);
+    background: var(--primary-color);
     color: var(--white-color);
-    opacity: 1;
+    box-shadow: 0 3px 10px rgba(0, 107, 255, 0.2);
   }
 
   .hero-content {

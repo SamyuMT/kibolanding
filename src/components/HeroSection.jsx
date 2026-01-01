@@ -49,11 +49,31 @@ export default function HeroSection() {
             </button>
           </div>
         </nav>
-        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div className="navbar-right">
+          <div className="mobile-lang-toggle">
+            <button
+              type="button"
+              className={`mobile-lang-option ${lang === 'en' ? 'active' : ''}`}
+              onClick={() => setLang('en')}
+              aria-pressed={lang === 'en'}
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              className={`mobile-lang-option ${lang === 'es' ? 'active' : ''}`}
+              onClick={() => setLang('es')}
+              aria-pressed={lang === 'es'}
+            >
+              ES
+            </button>
+          </div>
+          <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
       
       {menuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
@@ -63,24 +83,6 @@ export default function HeroSection() {
         <a href="#about" className="mobile-nav-item" onClick={closeMenu}>{t.nav.about}</a>
         <a href="#features" className="mobile-nav-item" onClick={closeMenu}>{t.nav.features}</a>
         <a href="#screens" className="mobile-nav-item" onClick={closeMenu}>{t.nav.screens}</a>
-        <div className="mobile-lang-toggle">
-          <button
-            type="button"
-            className={`mobile-lang-option ${lang === 'en' ? 'active' : ''}`}
-            onClick={() => { setLang('en'); closeMenu(); }}
-            aria-pressed={lang === 'en'}
-          >
-            EN
-          </button>
-          <button
-            type="button"
-            className={`mobile-lang-option ${lang === 'es' ? 'active' : ''}`}
-            onClick={() => { setLang('es'); closeMenu(); }}
-            aria-pressed={lang === 'es'}
-          >
-            ES
-          </button>
-        </div>
       </nav>
 
       <div className="hero-content">
